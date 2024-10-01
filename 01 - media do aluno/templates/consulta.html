@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define a linguagem do documento como português (Brasil) -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o charset como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala da página para dispositivos móveis -->
+    <title>Consultar Notas</title> <!-- Título da página que será exibido na aba do navegador -->
+    <link rel="stylesheet" href="/static/styles/estiloconsulta.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+<body>
+    <!-- Menu de navegação com links para lançar notas e consultar notas -->
+    <nav class="linha">
+        <a href="/" class="letras1">Lançar Notas</a> | <!-- Link para a página inicial (lançar notas) -->
+        <a href="/consulta" class="letras2">Consultar Notas</a> <!-- Link para a página de consulta de notas -->
+    </nav>
+
+    <!-- Tabela para exibir as notas dos alunos -->
+    <div class="consulta_notas">
+        <h2>Consultar Notas</h2> <!-- Título da seção de consulta -->
+        <table> <!-- Início da tabela -->
+            <tr> <!-- Linha do cabeçalho da tabela -->
+                <th>Nome do Aluno</th> <!-- Cabeçalho para o nome do aluno -->
+                <th>Nota 1</th> <!-- Cabeçalho para a primeira nota -->
+                <th>Nota 2</th> <!-- Cabeçalho para a segunda nota -->
+                <th>Nota 3</th> <!-- Cabeçalho para a terceira nota -->
+                <th>Média</th> <!-- Cabeçalho para a média -->
+                <th>Status</th> <!-- Cabeçalho para o status (Aprovado/Reprovado) -->
+            </tr>
+            <!-- Laço de repetição para listar os alunos e suas notas -->
+            {% for pro in notas %}
+            <tr> <!-- Linha da tabela para cada aluno -->
+                <td>{{ pro.nome }}</td> <!-- Exibe o nome do aluno -->
+                <td>{{ pro.nota_1 }}</td> <!-- Exibe a primeira nota do aluno -->
+                <td>{{ pro.nota_2 }}</td> <!-- Exibe a segunda nota do aluno -->
+                <td>{{ pro.nota_3 }}</td> <!-- Exibe a terceira nota do aluno -->
+                <td>{{ pro.media }}</td> <!-- Exibe a média do aluno -->
+                <td>{{ pro.status }}</td> <!-- Exibe o status do aluno -->
+            </tr>
+            {% endfor %} <!-- Fim do laço de repetição -->
+        </table> <!-- Fim da tabela -->
+    </div>
+</body>
+</html>

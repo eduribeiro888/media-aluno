@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define a linguagem do documento como português (Brasil) -->
+<head>
+    <meta charset="UTF-8"> <!-- Define o charset como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala da página para dispositivos móveis -->
+    <title>Lançar Notas</title> <!-- Título da página que será exibido na aba do navegador -->
+    <link rel="stylesheet" href="/static/styles/estilo.css"> <!-- Link para o arquivo CSS externo -->
+</head>
+
+<body>
+    <!-- Menu de navegação com links para lançar notas e consultar notas -->
+    <nav class="linha">
+        <a href="/" class="letras1">Lançar Notas</a> | <!-- Link para a página inicial (lançar notas) -->
+        <a href="/consulta" class="letras2">Consultar Notas</a> <!-- Link para a página de consulta de notas -->
+    </nav>
+   
+    <!-- Formulário para lançar as notas dos alunos -->
+    <div class="cad_notas">
+        <form action="/validar_notas" method="post" class="cad_notas_formulario"> <!-- Envia os dados via método POST -->
+            <h2>Lançar Notas</h2> <!-- Título do formulário -->
+            <label for="">Nome do Aluno:</label> <!-- Rótulo para o campo nome do aluno -->
+            <input type="text" name="nome_do_aluno" id="nome_do_aluno"> <!-- Campo para digitar o nome do aluno -->
+
+            <label for="">Nota 1:</label> <!-- Rótulo para o campo da primeira nota -->
+            <input type="text" name="nota_1" id="nota_1"> <!-- Campo para digitar a primeira nota -->
+
+            <label for="">Nota 2:</label> <!-- Rótulo para o campo da segunda nota -->
+            <input type="text" name="nota_2" id="nota_2"> <!-- Campo para digitar a segunda nota -->
+
+            <label for="">Nota 3:</label> <!-- Rótulo para o campo da terceira nota -->
+            <input type="text" name="nota_3" id="nota_3"> <!-- Campo para digitar a terceira nota -->
+
+            <!-- Botão de envio do formulário -->
+            <div class="botao_enviar">
+                <button type="submit" class="cad_notas_enviar">Enviar</button> <!-- Botão para enviar as informações -->
+            </div>
+        </form>
+    </div> 
+</body>
+</html>
+

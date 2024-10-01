@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Notas</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <div class="consulta_notas">
+        <h2>Consultar Notas</h2>
+        <table>
+            <tr>
+                <th>Nome do Aluno</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+            </tr>
+            {% for pro in prod %}
+            <tr>
+                <td>{{ pro.nome }}</td>
+                <td>{{ pro.valor }}</td>
+                <td>{{ pro.quantidade }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
